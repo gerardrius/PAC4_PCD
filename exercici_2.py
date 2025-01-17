@@ -5,9 +5,7 @@
 # i cognoms (en anglès).
 
 # from exercici_1 import get_monegros_df
-import exercici_1 as ex1
 
-df = ex1.get_monegros_df()
 
 
 # Defineix la funció name_surname(df), que li passarem com a argument el dataframe, i ens 
@@ -32,12 +30,41 @@ def name_surname (df):
 
     return df
 
-name_surname (df).head(5)
-
-# Executa la funció, i mostra els 5 primers valors del dataframe.
+# Executa la funció, i mostra els 5 primers valors del dataframe. -> al main.py
 
 # Els ciclistes que tenen un temps 00:00:00 significa que no van participar a la prova 
 # (estaven inscrits però no van fer la cursa). Elimina'ls del dataset.
 
-# Quants ciclistes tenim ara en el dataframe? Mostra els 5 primers. Recupera les dades del 
-# ciclista amb dorsal=1000.
+def remove_dns (df):
+    '''
+    Funció que esborra les files en què el valor de time és '00:00:00':
+
+    Args:
+        pren el dataframe amb dades de la cursa dels Monegros com a referència.
+
+    Returns:
+        :obj:`pandas.DataFrame`: df filtrat per ciclistes que sí que han participat a la cursa
+    '''
+    # filtrem per la condició que el registre de temps no sigui 00:...
+    df = df[df['time'] != '00:00:00']
+    return df
+
+# Quants ciclistes tenim ara en el dataframe? Mostra els 5 primers. 
+# Per a respondre a aquesta pregunta podem recórrer a la funció definida al mòdul exercici_1.py -> total_ciclistes (df)
+
+# Recupera les dades del ciclista amb dorsal=1000.
+def get_thousandth_cyclist (df):
+    '''
+    Funció que retorna les dades del ciclista amb dorsal 1000.
+
+    Args:
+        pren el dataframe amb dades de la cursa dels Monegros com a referència.
+
+    Returns:
+        :obj:`pandas.DataFrame`: mostra una única fila amb les dades del ciclista amb dorsal 1000, en cas que hagi participat a la cursa.
+    '''
+    try:
+        print(df[df['dorsal'] == 1000])
+    except:
+        print('El ciclista amb dorsal 1000 no ha començat la cursa!')
+

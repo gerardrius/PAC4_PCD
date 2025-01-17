@@ -2,8 +2,6 @@
 import pandas as pd
 import os
 
-
-
 def get_monegros_df ():
     '''
     Defineix un dataframe prenent com a referència les dades del dataset.csv:
