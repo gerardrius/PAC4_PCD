@@ -27,3 +27,6 @@ Exercici 5.
 Un cop acabats tots els mòduls, he definit el guió del main.py, que crida les funcions en l'ordre requerit per l'enunciat de l'activitat per tal de mostrar per pantalla els resultats que es demanen.
 
 També he afegit el document de requeriments mitjançant la corresponent ordre al terminal.
+
+Per executar el programa, cal que s'executi el fitxer main.py des del directori PAC4_PCD, tal i com es pot observar a la imatge adjunta.
+![alt text](image.png)

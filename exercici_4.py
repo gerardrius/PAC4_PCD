@@ -12,7 +12,7 @@ def club_to_upper (df):
     Returns:
         :obj:`pandas.DataFrame`: retorna el dataframe amb la columna club modificada
     '''
-    df['club'] = df['club'].apply(lambda x: x.upper())
+    df['club_clean'] = df['club_clean'].apply(lambda x: x.upper())
     return df
 
 def remove_club_type (df):
@@ -23,7 +23,7 @@ def remove_club_type (df):
             club_instance = club_instance.replace(value, '')
         return club_instance
 
-    df['club'] = df['club'].apply(lambda x: remover(x))
+    df['club_clean'] = df['club_clean'].apply(lambda x: remover(x))
 
     return df
 
@@ -42,7 +42,7 @@ def remove_initials (df):
     pattern = r'^(C\.C\. |C\.C |CC |C\.D\. |C\.D |CD |A\.C\. |A\.C |AC |A\.D\. |A\.D |AD |A\.E\. |A\.E |AE |E\.C\. |E\.C |EC |S\.C\. |S\.C |SC |S\.D\. |S\.D |SD )'
 
     # reemplacem les coincidencies per no res
-    df['club'] = df['club'].str.replace(pattern, '', regex=True)
+    df['club_clean'] = df['club_clean'].str.replace(pattern, '', regex=True)
 
     return df
 
@@ -61,7 +61,7 @@ def remove_last_part (df):
     pattern = r'( T\.T\.| T\.T| TT| T\.E\.| T\.E| TE| C\.C\.| C\.C| CC| C\.D\.| C\.D| CD| A\.D\.| A\.D| AD| A\.C\.| A\.C| AC)$'
 
     # reemplacem les coincidencies per no res
-    df['club'] = df['club'].str.replace(pattern, '', regex=True)
+    df['club_clean'] = df['club_clean'].str.replace(pattern, '', regex=True)
 
     return df
 
@@ -97,6 +97,8 @@ def clean_club (df):
     Returns:
         DataFrame: el DataFrame netejat.
     '''
+    # primer creem una columna nova, per tal d'incloure-hi el nom del club netejat
+    df['club_clean'] = df['club']
 
     # 1: Convertir a majúscules
     df = club_to_upper(df)

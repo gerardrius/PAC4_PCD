@@ -9,7 +9,7 @@ def ciclistes_ucsc (df):
 
     ucsc_bikers = ucsc['biker'].to_list()
 
-    print(f'Els ciclistes de la UCSC són els següents: {ucsc_bikers}')
+    print(f'Els ciclistes de la UCSC són els següents: {ucsc_bikers}.')
 
 def millor_temps_ucsc (df):
     ucsc = df[df['club'] == 'UCSC']
@@ -34,7 +34,7 @@ def millor_temps_ucsc (df):
     df = df.reset_index()
 
     posicio_real = df[df['biker'] == ciclista_1].index[0] + 1 # sumem 1 ja que l'index comença per 0
-    print(f'El {ciclista_1} ha acabat la prova en la {posicio_real}a posició')
+    print(f'El {ciclista_1} ha acabat la prova en la {posicio_real}a posició.')
 
     # pel percentatge, dividim la posició entre el total de participants i multipliquem per 100
     percentatge = round((posicio_real/df.shape[0])*100, 2)
