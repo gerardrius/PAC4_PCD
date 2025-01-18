@@ -17,10 +17,14 @@ print('grouped df by time bins')
 
 ex3.create_histogram (grouped_df)
 
-# print(os.path.join(os.getcwd(), "img"))
 
 
 
+
+# ex4: neteja
+
+# df = ex3.clean_club (df)
+# print(df.head(15))
 
 
 
