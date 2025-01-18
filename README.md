@@ -11,3 +11,5 @@ Seguidament, he creat els fitxers necessaris per al projecte dins la pròpia car
 Al file exercici_1.py hi he definit les funcions necessàries per obtenir el dataframe a partir del csv que tenim a la carpeta data. També hi he creat les diverses funcions que ens permeten mostrar la informació del df que es demana a l'exercici 1; les 5 primeres files, el nombre de participants i la longitud del df.
 
 Al file exercici_2.py hi he creat les funcions per anonimitzar els noms dels ciclistes, per filtrar el df per quedar-nos únicament amb les dades d'aquells ciclistes que han participat a la cursa, i per últim, per mostrar les dades del ciclista amb dorsal 1000.
+
+Per l'exercici_3.py, en primer lloc he creat una funció que modifica els valors de la columna time per tal d'agrupar la columna per bins de 20 minuts.
