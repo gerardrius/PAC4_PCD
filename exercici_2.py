@@ -6,8 +6,6 @@
 
 # from exercici_1 import get_monegros_df
 
-
-
 # Defineix la funció name_surname(df), que li passarem com a argument el dataframe, i ens 
 # retornarà el nou dataframe amb els noms canviats (columna biker).
 from faker import Faker

@@ -12,4 +12,4 @@ Al file exercici_1.py hi he definit les funcions necessàries per obtenir el dat
 
 Al file exercici_2.py hi he creat les funcions per anonimitzar els noms dels ciclistes, per filtrar el df per quedar-nos únicament amb les dades d'aquells ciclistes que han participat a la cursa, i per últim, per mostrar les dades del ciclista amb dorsal 1000.
 
-Per l'exercici_3.py, en primer lloc he creat una funció que modifica els valors de la columna time per tal d'agrupar la columna per bins de 20 minuts.
+Per l'exercici_3.py, en primer lloc he creat una funció que modifica els valors de la columna time per tal d'agrupar la columna per bins de 20 minuts. Seguidament, he creat la funció necessària per a agrupar els participants per franges de temps. En la mateixa funció he filtrat el df quedant-me únicament amb les columnes de franja de temps i dorsal, i he canviat el nom d'aquesta última per 'num_participants', que és més coherent. Per últim, he definit la funció que permet obtenir l'histograma del df agrupat. La imatge resultant es guarda a la carpeta img, dins del repositori PAC4_PCD.
