@@ -20,3 +20,6 @@ Exercici 3.
 Exercici 4.
     Per l'exercici 4 hem creat un seguit de funcions que ens permeten netejar la columna "club" amb els requeriments que s'especifiquen a l'enunciat (nom en majúscules, sense un seguit de valors especifics ni patrons a l'inici i final de la string, entre d'altres).
     Amb la columna neta, hem creat un subdataframe de dues columnes (club i dorsal) per agrupar el nombre de participants per cada club, ordenant-lo de més a menys participants per club.
+
+Exercici 5.
+    En aquest exercici hem creat un parell de funcions per respondre a les preguntes plantejades. La primera filtra el df amb la columna club netejada per quedar-nos únicament amb les files corresponents a ciclistes de la Unió Ciclista Sant Cugat. Es mostra per pantalla la llista de ciclistes del club. A la segona funció es responen la resta de preguntes: ciclista més ràpid, posició real, i percentatge respecte el total de participants.
