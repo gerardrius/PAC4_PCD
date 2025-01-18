@@ -18,3 +18,5 @@ Exercici 3.
     En primer lloc he creat una funció que modifica els valors de la columna time per tal d'agrupar la columna per bins de 20 minuts. Seguidament, he creat la funció necessària per a agrupar els participants per franges de temps. En la mateixa funció he filtrat el df quedant-me únicament amb les columnes de franja de temps i dorsal, i he canviat el nom d'aquesta última per 'num_participants', que és més coherent. Per últim, he definit la funció que permet obtenir l'histograma del df agrupat. La imatge resultant es guarda a la carpeta img, dins del repositori PAC4_PCD.
 
 Exercici 4.
+    Per l'exercici 4 hem creat un seguit de funcions que ens permeten netejar la columna "club" amb els requeriments que s'especifiquen a l'enunciat (nom en majúscules, sense un seguit de valors especifics ni patrons a l'inici i final de la string, entre d'altres).
+    Amb la columna neta, hem creat un subdataframe de dues columnes (club i dorsal) per agrupar el nombre de participants per cada club, ordenant-lo de més a menys participants per club.

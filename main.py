@@ -27,6 +27,8 @@ ex3.create_histogram (grouped_df)
 # print(df.head(15))
 
 
+# ex5: UCSC
+# A partir del dataframe amb la columna club netejada, obtenim els ciclistes de la UCSC
 
 
 
