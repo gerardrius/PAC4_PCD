@@ -23,3 +23,7 @@ Exercici 4.
 
 Exercici 5.
     En aquest exercici hem creat un parell de funcions per respondre a les preguntes plantejades. La primera filtra el df amb la columna club netejada per quedar-nos únicament amb les files corresponents a ciclistes de la Unió Ciclista Sant Cugat. Es mostra per pantalla la llista de ciclistes del club. A la segona funció es responen la resta de preguntes: ciclista més ràpid, posició real, i percentatge respecte el total de participants.
+
+Un cop acabats tots els mòduls, he definit el guió del main.py, que crida les funcions en l'ordre requerit per l'enunciat de l'activitat per tal de mostrar per pantalla els resultats que es demanen.
+
+També he afegit el document de requeriments mitjançant la corresponent ordre al terminal.

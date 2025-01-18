@@ -26,12 +26,9 @@ def name_surname (df):
     # Canviem els noms de cada fila dins la columna biker per noms aleatoris
     df['biker'] = df.apply(lambda x: fake.name(), axis=1)
 
+    print('Noms aleatoris generats correctament!')
+
     return df
-
-# Executa la funció, i mostra els 5 primers valors del dataframe. -> al main.py
-
-# Els ciclistes que tenen un temps 00:00:00 significa que no van participar a la prova 
-# (estaven inscrits però no van fer la cursa). Elimina'ls del dataset.
 
 def remove_dns (df):
     '''
@@ -45,6 +42,9 @@ def remove_dns (df):
     '''
     # filtrem per la condició que el registre de temps no sigui 00:...
     df = df[df['time'] != '00:00:00']
+
+    print('Ciclistes sense participar eliminats del DataFrame correctament!')
+
     return df
 
 # Quants ciclistes tenim ara en el dataframe? Mostra els 5 primers. 
@@ -62,6 +62,7 @@ def get_thousandth_cyclist (df):
         :obj:`pandas.DataFrame`: mostra una única fila amb les dades del ciclista amb dorsal 1000, en cas que hagi participat a la cursa.
     '''
     try:
+        print('Les dades del ciclista amb dorsal 1000 són les següents:')
         print(df[df['dorsal'] == 1000])
     except:
         print('El ciclista amb dorsal 1000 no ha començat la cursa!')

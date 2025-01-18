@@ -27,7 +27,7 @@ def minutes_002040 (time_instance):
     time = hours + ':' + minutes
     return time
 
-def time_agrupation (df):
+def time_grouped_column (df):
     '''
     Funció que crea una nova columna al df amb les dades de temps agrupades per bins de 20 minuts:
 
@@ -40,16 +40,30 @@ def time_agrupation (df):
     # creem la nova columna aplicant la funció minutes_002040 mitjançant una lambda
     df['time_grouped'] = df['time'].apply(lambda x: minutes_002040(x))
 
+    print('Simplificació dels temps per franges de 20 minuts realitzada!')
+
+    return df
+
+def time_grouped_df (df):
+    '''
+    Funció que crea un nou df amb dues columnes, una per cada grup de temps, i l'altra amb el nombre de participants al grup:
+
+    Args:
+        pren el dataframe de referència com a argument.
+
+    Returns:
+        `pandas.DataFrame`: retorna el dataframe agrupat per time_grouped
+    '''
     # filtro el df per quedar-me únicament amb les columnes de time_grouped i dorsals, per fer el recompte de participants per cada franja
     df = df[['time_grouped', 'dorsal']].groupby('time_grouped').count().reset_index()
     
     # reanomeno la columna dorsal per num_participants
     df.rename(columns={'dorsal': 'num_participants'}, inplace=True)
 
+    print("S'ha creat el nou dataframe amb l'agrupació de ciclistes per franja de temps!")
+
     return df
 
-# Mostra els 15 primers valors del dataframe.
-# print(df.head(15))
 
 def create_histogram (grouped_df):
     '''

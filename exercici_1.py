@@ -21,6 +21,8 @@ def get_monegros_df ():
     # carreguem el fitxer csv en df
     df = pd.read_csv(file_path, sep=';')
 
+    print('DataFrame obtingut correctament')
+
     return df
 
 def primers_cinc (df):
@@ -33,6 +35,7 @@ def primers_cinc (df):
     Returns:
         No retorna cap valor
     '''
+    print('Mostrem les 5 primeres files del DataFrame')
     print(df.head(5))
 
 def total_ciclistes (df):

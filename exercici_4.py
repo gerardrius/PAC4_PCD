@@ -113,11 +113,9 @@ def clean_club (df):
     # 5: Eliminar espais en blanc al principi i al final
     df = trim_club_name(df)
 
+    print("S'ha realitzat la neteja de la columna 'club' correctament!")
+
     return df
-
-# Crear columna nova (club_clean)
-# Mostrar els 15 primers resultats
-
 
 # Crear un df amb agrupació per nom del club, i sort_by num_participants desc
 def club_agrupation (df):
@@ -138,6 +136,8 @@ def club_agrupation (df):
     df.rename(columns={'dorsal': 'num_participants'}, inplace=True)
 
     df = df.sort_values(by='num_participants', ascending=False)
+
+    print("S'ha creat un nou dataframe amb l'agrupació de ciclistes per club, ordenat de més a menys membres.")
 
     return df
     
